@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 [Ubuntu_Server]
 ec2 ansible_host=18.231.119.58
+
+=======
+[Ubuntu_Server]
+ec2 ansible_host=18.231.119.58
+>>>>>>> b8f862fbde5f8a3f3b407908437db45d7d08564b
