@@ -31,7 +31,7 @@ jobs:
           IMAGE=\$(echo ghcr.io/\${{ github.repository }}-backend:\${{ steps.commit.outputs.short }} | tr '[:upper:]' '[:lower:]')
 
           # Stop and remove the running container
-          
+
           CONTAINER_ID=\$(sudo docker ps --filter "publish=2000" -q)
 
           echo "Stopping container \$CONTAINER_ID"
@@ -58,5 +58,7 @@ jobs:
             -e DB_PORT=\${{ secrets.DB_PORT }} \\
             -e DB_NAME=\${{ secrets.DB_NAME }} \\
             \$IMAGE
+
+          echo "Container running"
 
           EOFs
